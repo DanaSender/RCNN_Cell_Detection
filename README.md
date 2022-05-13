@@ -25,6 +25,7 @@ For example, in this image, the blue channel represents cells expressing CHGA/SY
 expressing TPH1/5HT and the green channel represents cells expressing HDC. The purple cells represent cells expressing
 both CHGA/SYP and TPH1/5HT.
 ![Instance Segmentation Sample](assets/all_three_channels.JPG)
+
 To create the data for the R-CNN, I created a tool called counting tool. This tool allows the cells in the images to be 
 easily counted because it provides most of the functions required for correct counting, such as by marking the 
 bounding box on the image, changing the brightness and the contrast of the image, and facilitates a convenient 
@@ -52,13 +53,14 @@ Because the amount of data was not very large (750 images), I used transfer lear
 MS COCO object detection dataset) to achieve faster and more accurate learning without overfitting but the 
 learning can also be from scratch.
 
-The image following displays marked cells in a given image. The image on the right is the network’s prediction. 
+The images following displays marked cells in a given image. The image on the right is the network’s prediction. 
 The image on the left contains the actual tagging done by a lab worker.
 ![Instance Segmentation Sample](assets/RCNN_vs_predicted_1.JPG)
 
 ![Instance Segmentation Sample](assets/RCNN_vs_predicted_2.JPG)
 
-The image following displays marked cells in new images. The images are new, therefore there is no actual labeling. 
+
+The image following displays marked cells in new images therefore there is no actual labeling. 
 ![Instance Segmentation Sample](assets/RCNN_on_new_images.JPG)
 
 
