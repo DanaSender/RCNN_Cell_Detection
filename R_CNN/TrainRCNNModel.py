@@ -1,21 +1,22 @@
-# fit a mask rcnn on the cell dataset
+# This file fits a R-CNN on the cell dataset
+
+# Imports
 from os import listdir
-from numpy import zeros
-from numpy import asarray
 from mrcnn.utils import Dataset
 from mrcnn.config import Config
 from mrcnn.model import MaskRCNN
 import pickle
-import numpy as np
 
 NUM_OF_TRAIN_IMAGES = 710
 NUM_OF_TOTAL_IMAGES = 710 + 37
 
 
-# class that defines and loads the cell dataset
+# This class defines and loads the cell dataset
 class cellDataset(Dataset):
-    # load the dataset definitions
     def load_dataset(self, dataset_dir):
+        """
+        This method receives directory and loads the dataset
+        """
         from random import shuffle
         # define one class
         self.add_class("dataset", 1, "cell")
@@ -31,42 +32,25 @@ class cellDataset(Dataset):
             ann_path = annotations_dir + image_id + "_results"
             self.add_image('dataset', image_id=image_id, path=img_path, annotation=ann_path)
 
-    # extract bounding boxes from an annotation file
-    def extract_boxes(self, filename):
-        infile = open(filename, 'rb')
-        boxes = pickle.load(infile)
-        infile.close()
-        width = 1024
-        height = 1024
-        return boxes, width, height
-
-    # load the masks for an image
-    def load_mask(self, image_id):
+    def load_boxes(self, image_id):
+        """
+        This method receives an image id and loads the ground truth
+        """
         # get details of image
         info = self.image_info[image_id]
         # define box file location
         path = info['annotation']
-        # load XML
-        boxes, w, h = self.extract_boxes(path)
-        # create one array for all masks, each on a different channel
-        masks = zeros([h, w, len(boxes)], dtype='uint8')
-        # create masks
-        class_ids = list()
-        for i in range(len(boxes)):
-            box = boxes[i]
-            row_s, row_e = box[1], box[3]
-            col_s, col_e = box[0], box[2]
-            masks[row_s:row_e, col_s:col_e, i] = 1
-            class_ids.append(self.class_names.index('cell'))
-        return masks, asarray(class_ids, dtype='int32')
+        infile = open(path, 'rb')
+        boxes = pickle.load(infile)
+        infile.close()
+        return boxes
 
-    # load an image reference
     def image_reference(self, image_id):
         info = self.image_info[image_id]
         return info['path']
 
 
-# define a configuration for the model
+# This class defines a configuration for the model
 class cellConfig(Config):
     # define the name of the configuration
     NAME = "cell_cfg"
