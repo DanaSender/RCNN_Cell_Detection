@@ -12,7 +12,6 @@ The repository includes:
 * Training code on biological data.
 * Pre-trained weights of MS COCO for transfer learning.
 * Code for detect cells in new images.
-* Code for Evaluation the results (AP).
 * Source code of Mask R-CNN built on FPN and ResNet101.
 
 
