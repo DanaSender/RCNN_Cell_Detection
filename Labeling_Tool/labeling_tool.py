@@ -1,3 +1,5 @@
+# This tool is designed to label cells by bounding box and count them in each of the channels
+
 # import the necessary packages
 import cv2
 import argparse
@@ -6,7 +8,7 @@ import read_files
 import pickle
 import os
 
-# now let's initialize the list of reference point
+# initialize the list of reference point
 ref_point = []
 # rects_all_channels = {"All channels": [], "Blue": [], "Green": [], "Red": [], "Blue-Green": [], "Blue-Red": [],
 #                      "Red-Green": []}
@@ -44,12 +46,6 @@ def draw_image(alpha, beta):
     cv2.imshow('Control', control_image)
 
 
-def set_button_color_text(button, color_val, text, pos):
-    global control_image
-    control_image[button[0]:button[1], button[2]:button[3]] = color_val
-    cv2.putText(control_image, text, pos, cv2.FONT_HERSHEY_PLAIN, button_font_size, black, lineType)
-
-
 def draw_control():
     global b_flag, g_flag, r_flag, control_image
     # create button
@@ -62,7 +58,17 @@ def draw_control():
     cv2.imshow('Control', control_image)
 
 
-def shape_selection(event, x, y, flags, param):
+def set_button_color_text(button, color_val, text, pos):
+    global control_image
+    control_image[button[0]:button[1], button[2]:button[3]] = color_val
+    cv2.putText(control_image, text, pos, cv2.FONT_HERSHEY_PLAIN, button_font_size, black, lineType)
+
+
+def shape_selection(event, x, y):
+    """
+    This method receives an event (mouse's click) and x,y coordinates (location) and accordingly updates the image
+    and the list of all the rectangles
+    """
     # grab references to the global variables
     global ref_point, curr_rect
 
@@ -87,7 +93,11 @@ def shape_selection(event, x, y, flags, param):
         draw_image(alpha, beta)
 
 
-def button_switch(event, x, y, flags, param):
+def button_switch(event, x, y):
+    """
+    This method receives an event (mouse's click) and x,y coordinates (location) and accordingly changes the color
+    of the button and updates the current channel and image accordingly
+    """
     global channel, curr_rect, image, control_image, b_flag, g_flag, r_flag
     # check if the click is within the dimensions of the button
     if event == cv2.EVENT_LBUTTONUP:
@@ -139,7 +149,11 @@ def button_switch(event, x, y, flags, param):
     draw_image(alpha, beta)
 
 
-def image_for_one_channel(orig_image, cnl):
+def one_channel_image(orig_image, cnl):
+    """
+    This method receives an image and a specific channel and returns a black and white image
+    only of the requested channel.
+    """
     channel_image = orig_image.copy()
     channel_image[:, :, 0] = channel_image[:, :, cnl]
     channel_image[:, :, 1] = channel_image[:, :, cnl]
@@ -147,7 +161,10 @@ def image_for_one_channel(orig_image, cnl):
     return channel_image
 
 
-def image_for_two_channel(orig_image, cnl):
+def two_channels_image(orig_image, cnl):
+    """
+    This method receives an image and a specific channel and returns an image of the two other channels
+    """
     channel_image = orig_image.copy()
     channel_image[:, :, cnl] = 0
     return channel_image
@@ -164,6 +181,10 @@ def brightness_vals(val):
 
 
 def save_images(saving_place, image_nm, image_mode):
+    """
+    This method receives a name of the image, the mode of the image (whether in a folder or as an individual) and path
+    and saves the image in this path
+    """
     if image_mode:
         path_to_save = saving_place + "\\" + os.path.basename(os.path.normpath(image_nm))
     else:
@@ -178,12 +199,12 @@ def run_program(img, name, saving_place, image_mode):
     global images_dict, curr_rect, image, image_name
     image_name = name
     # to display blue channel in black white
-    blue_image = image_for_one_channel(img, 0)
-    green_image = image_for_one_channel(img, 1)
-    red_image = image_for_one_channel(img, 2)
-    b_g_image = image_for_two_channel(img, 2)
-    b_r_image = image_for_two_channel(img, 1)
-    r_g_image = image_for_two_channel(img, 0)
+    blue_image = one_channel_image(img, 0)
+    green_image = one_channel_image(img, 1)
+    red_image = one_channel_image(img, 2)
+    b_g_image = two_channels_image(img, 2)
+    b_r_image = two_channels_image(img, 1)
+    r_g_image = two_channels_image(img, 0)
     images_dict = {"All channels": img.copy(), "Blue": blue_image, "Green": green_image,
                    "Red": red_image, "Blue-Green": b_g_image, "Blue-Red": b_r_image, "Red-Green": r_g_image}
 

@@ -1,7 +1,9 @@
 To execute labeling tool:
-1. Open the folder placed where the tool has been saved and then to run a command line (terminal)
+1. Open the folder placed where the tool has been saved and then to run a command line (terminal).
 2. Several inputs are then required as follows:
+
 counting_tool.exe [-h] [-f FOLDER] [-i IMAGE] -s SAVE
+
 The first input to be used is the tool name counting_tool.exe.
 The second input consists of two options: The first option is to choose one image at a time.
 To do this, the user types the parameter -i followed by the path of the image.
