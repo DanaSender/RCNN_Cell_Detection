@@ -5,7 +5,7 @@ This manual counting is labor-intensive and often inconsistent. To do the counts
 I used a deep learning model (R-CNN). The main goal of this R-CNN is to be able to replace any lab worker to 
 create much faster and more reliable results. To create the data I also developed a labeling tool.
 
-![Instance Segmentation Sample](assets/general_cell_detetion.JPG)
+![Instance Segmentation Sample](assets/General_cell_detetion.JPG)
 
 The repository includes:
 * Labeling_Tool - 
@@ -27,7 +27,7 @@ cell type. The main goal is to count the number of cell in each of the channels.
 For example, in this image, the blue channel represents cells expressing CHGA/SYP, the red channel represents cells 
 expressing TPH1/5HT and the green channel represents cells expressing HDC. The purple cells represent cells expressing
 both CHGA/SYP and TPH1/5HT.
-![Instance Segmentation Sample](assets/all_three_channels.JPG)
+![Instance Segmentation Sample](assets/All_three_channels.JPG)
 
 To create the data for the R-CNN, I created a tool called labeling tool. This tool allows the cells in the images to be 
 easily labeled and counted because it provides most of the functions required for correct labeling, such as by marking the 
@@ -36,7 +36,7 @@ transition between all channels. In addition, the results are saved in such a wa
 R-CNN.
 
 The labeling tool:
-![Instance Segmentation Sample](assets/labeling_tool.JPG)
+![Instance Segmentation Sample](assets/Labeling_tool.JPG)
 The tool displays two windows; one window presents the name of the image as well as the image itself, while the second 
 window is the control window which allows the transition between the channels. The user can activate the channels of 
 the image by left-clicking the control window. The blue background color represents a channel currently displayed in 
@@ -45,7 +45,7 @@ the image.
 For example, while only the blue channel is selected in the control window, in the image window, the image only 
 displays the blue channel, while in the control window, only the blue channel is displayed with a blue background.
 In addition, two cells marked by the user by a bounding box.
-![Instance Segmentation Sample](assets/labeling_tool_blue.JPG)
+![Instance Segmentation Sample](assets/Labeling_tool_blue.JPG)
 
 
 # R-CNN for Cell Detection
