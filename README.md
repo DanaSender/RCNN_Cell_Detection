@@ -8,12 +8,16 @@ create much faster and more reliable results. To create the data I also develope
 ![Instance Segmentation Sample](assets/general_cell_detetion.JPG)
 
 The repository includes:
-* Code for labeling tool.
-* Training code on biological data.
-* Pre-trained weights of MS COCO for transfer learning.
-* Code for detect cells in new images.
-* Source code of Mask R-CNN built on FPN and ResNet101.
-
+* Labeling_Tool - 
+    * Code for labeling tool.
+* R_CNN - 
+    * Training code on biological data.
+    * Code for detect cells in new images.
+    * Weights of the model trained on my dataset (biological images)
+    * Pre-trained weights of MS COCO for the transfer learning.
+    * Source code of Mask R-CNN built on FPN and ResNet101.
+* User_Example -
+    * Demonstration my model on a new given image
 
 # Labeling Tool
 In my study, I performed immunohistochemistry staining of biopsies taken from human stomachs. Therefore, the data 
@@ -62,6 +66,15 @@ The image on the left contains the actual tagging done by a lab worker.
 The image following displays marked cells in new images therefore there is no actual labeling. 
 ![Instance Segmentation Sample](assets/RCNN_on_new_images.JPG)
 
+# User Example
+This folder illustrates an example of running the model I trained. The folder contains a jupyter file and a folder 
+contains one image. In order to run the example, the user should update the path of the folder where the images we 
+want to examine are located and then run the program. The output for each image is its division into three channels 
+and in each channel the number of cells detected.
+
+If there are several images in the folder (more than one) then, in each image the cells will be displayed by bounding 
+boxes and the number of cells identified in it will be written. Once the program finished plotting all the images,
+the final number of cells in each of the channels will be printed.
 
 ## Requirements
 Python 3.4, TensorFlow 1.3, Keras 2.0.8 and other common packages listed in `requirements.txt`.
