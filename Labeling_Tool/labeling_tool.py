@@ -1,17 +1,15 @@
 # This tool is designed to label cells by bounding box and count them in each of the channels
 
-# import the necessary packages
+# Imports
+from Labeling_Tool import read_files
 import cv2
 import argparse
 import numpy as np
-import read_files
 import pickle
 import os
 
 # initialize the list of reference point
 ref_point = []
-# rects_all_channels = {"All channels": [], "Blue": [], "Green": [], "Red": [], "Blue-Green": [], "Blue-Red": [],
-#                      "Red-Green": []}
 images_dict = {}
 alpha = 1.0
 beta = 0

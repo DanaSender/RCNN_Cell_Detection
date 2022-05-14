@@ -1,10 +1,12 @@
-import cv2
-import os
-
+# This file is responsible for reading the images in the folder
 # Opening the new folder is for a situation where you open the folder of the photos, go over some image and then finish.
 # So when we open the original folder again, we will not have to go through all the images we have already gone
 # through. What the software does is create a folder and then move to it the files we have already gone through and
 # delete them from the original folder.
+
+# Imports
+import cv2
+import os
 
 
 def open_folder(folder):

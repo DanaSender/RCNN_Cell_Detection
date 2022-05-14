@@ -189,7 +189,7 @@ cfg = PredictionConfig()
 # define the model
 model = MaskRCNN(mode='inference', model_dir='./', config=cfg)
 # load model weights
-model_path = 'cell_cfg20220128T0949_743_DRBA/mask_rcnn_cell_cfg_0005.h5'
+model_path = 'rcnn_cell_weights.h5'
 # model_path = 'cell_cfg_first_try/mask_rcnn_cell_cfg_0005.h5'
 model.load_weights(model_path, by_name=True)
 # plot predictions for train dataset

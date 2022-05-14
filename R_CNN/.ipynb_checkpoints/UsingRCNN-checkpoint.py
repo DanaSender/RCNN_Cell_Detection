@@ -1,7 +1,4 @@
-# This software uses weights trained to predicate new images.
-# In order for the software to work, it needs to receive a path to a folder that has the
-# images on which we want to do the prediction.
-
+# detect cells in photos with mask rcnn model
 from numpy import expand_dims
 from matplotlib import pyplot
 from matplotlib.patches import Rectangle
@@ -75,6 +72,7 @@ def plot_predicted(model, image_path, cfg, count_dict):
         # plot raw pixel data
         axis[i].imshow(img)
         axis[i].set_title(channel + " channel: "+ str(num_of_rect) +" cells")
+        # ax = pyplot.gca()
         axis[i].axis('off')
         plot_boxes_on_image(axis, fig, i, yhat)
     pyplot.show()
@@ -97,13 +95,13 @@ def run_program(images_paths):
     # define the model
     model = MaskRCNN(mode='inference', model_dir='./', config=cfg)
     # load model weights
-    model_path = '../R_CNN/rcnn_cell_weights.h5'
+    model_path = 'cell_cfg20220128T0949_743_DRBA/mask_rcnn_cell_cfg_0005.h5'
     model.load_weights(model_path, by_name=True)
     count_dict = {'Blue': 0, 'Red': 0, 'Green': 0}
     for image_path in images_paths:
         count_dict = plot_predicted(model, image_path, cfg, count_dict)
-    print("Total cells in all images: " + "\nBlue channel: " + str(count_dict["Blue"])+"\nRed channel: " +
-          str(count_dict["Red"])+"\nGreen channel: "+str(count_dict["Green"]))
+    print("Total cells in all images: " + "Blue channel: " + str(count_dict["Blue"])+", Red channel: " +
+          str(count_dict["Red"])+", Green channel: "+str(count_dict["Green"]))
 
 
 if __name__ == '__main__':
@@ -113,9 +111,12 @@ if __name__ == '__main__':
     ap.add_argument("-s", "--save", required=False, help="Path to the result")
     args = vars(ap.parse_args())
 
-    # Checks whether the user entered a folder path
+    # check if specific image was entered (if yes- run only the image, if no- go over all the folder)
     if args["folder"] is not None:
         images_paths = read_files(args["folder"])
         run_program(images_paths)
     else:
         print("You should enter a folder name")
+
+    # images_paths = read_files("G:/Dana/Images for counting/images_TPH1/pat29stomach1")
+    # run_program(images_paths)
