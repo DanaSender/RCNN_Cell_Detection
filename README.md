@@ -19,6 +19,7 @@ The repository includes:
 * User_Example -
     * Demonstration my model on a new given image
 
+
 # Labeling Tool
 In my study, I performed immunohistochemistry staining of biopsies taken from human stomachs. Therefore, the data 
 consists of images while each image consists of three channels- blue, green, and red where each represents a different 
