@@ -77,7 +77,7 @@ boxes and the number of cells identified in it will be written. Once the program
 the final number of cells in each of the channels will be printed.
 
 ## Requirements
-Python 3.4, TensorFlow 1.3, Keras 2.0.8 and other common packages listed in `requirements.txt`.
+Python 3.4, TensorFlow 1.15.3, Keras 2.2.4 and other common packages listed in `requirements.txt`.
 
 ## Acknowledgments
 The R-CNN architecture in this project is based on [Mask R-CNN](https://github.com/matterport/Mask_RCNN).
