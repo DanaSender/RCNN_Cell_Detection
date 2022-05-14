@@ -175,29 +175,30 @@ def plot_actual_vs_predicted(data_set_name, dataset, model, cfg, n_images=10):
         pyplot.show(block=True)
 
 
-# prepare train set
-train_set = cellDataset()
-train_set.load_dataset('cell_data_DRBA/train_set')
-train_set.prepare()
-print('Train: %d' % len(train_set.image_ids))
-# prepare test/val set
-test_set = cellDataset()
-test_set.load_dataset('cell_data_DRBA/test_set')
-test_set.prepare()
-print('Test: %d' % len(test_set.image_ids))
-cfg = PredictionConfig()
-# define the model
-model = MaskRCNN(mode='inference', model_dir='./', config=cfg)
-# load model weights
-model_path = 'rcnn_cell_weights.h5'
-# model_path = 'cell_cfg_first_try/mask_rcnn_cell_cfg_0005.h5'
-model.load_weights(model_path, by_name=True)
-# plot predictions for train dataset
-# plot_actual_vs_predicted2("train", train_set, model, cfg,['pat2 body03 cy2HDC cy35HT cy5CHGA_SYP32'])
-image_path = 'G:/Dana/Mask R-CNN/all_cells_images/Amit/pat30/images_already_finish/pt30_cy2SYP_cy3CLPS_cy55HT29.tif'
-# image_path = "G:/Dana/Mask R-CNN/cell_data_DR_B_I_B_A/test_set/images/563.tif"
-plot_predicted(model, image_path, "Green")
-exit()
-plot_actual_vs_predicted("train", train_set, model, cfg, 10)
-# plot predictions for test dataset0
-plot_actual_vs_predicted("test", test_set, model, cfg, 10)
+if __name__ == '__main__':
+    # prepare train set
+    train_set = cellDataset()
+    train_set.load_dataset('cell_data_DRBA/train_set')
+    train_set.prepare()
+    print('Train: %d' % len(train_set.image_ids))
+    # prepare test/val set
+    test_set = cellDataset()
+    test_set.load_dataset('cell_data_DRBA/test_set')
+    test_set.prepare()
+    print('Test: %d' % len(test_set.image_ids))
+    cfg = PredictionConfig()
+    # define the model
+    model = MaskRCNN(mode='inference', model_dir='./', config=cfg)
+    # load model weights
+    model_path = 'rcnn_cell_weights.h5'
+    # model_path = 'cell_cfg_first_try/mask_rcnn_cell_cfg_0005.h5'
+    model.load_weights(model_path, by_name=True)
+    # plot predictions for train dataset
+    # plot_actual_vs_predicted2("train", train_set, model, cfg,['pat2 body03 cy2HDC cy35HT cy5CHGA_SYP32'])
+    image_path = 'G:/Dana/Mask R-CNN/all_cells_images/Amit/pat30/images_already_finish/pt30_cy2SYP_cy3CLPS_cy55HT29.tif'
+    # image_path = "G:/Dana/Mask R-CNN/cell_data_DR_B_I_B_A/test_set/images/563.tif"
+    plot_predicted(model, image_path, "Green")
+    exit()
+    plot_actual_vs_predicted("train", train_set, model, cfg, 10)
+    # plot predictions for test dataset0
+    plot_actual_vs_predicted("test", test_set, model, cfg, 10)

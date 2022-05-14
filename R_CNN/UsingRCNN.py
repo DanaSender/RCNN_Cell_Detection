@@ -92,7 +92,7 @@ class PredictionConfig(Config):
     IMAGES_PER_GPU = 1
 
 
-def run_program(images_paths):
+def run_program(images_path):
     cfg = PredictionConfig()
     # define the model
     model = MaskRCNN(mode='inference', model_dir='./', config=cfg)
@@ -100,8 +100,8 @@ def run_program(images_paths):
     model_path = '../R_CNN/rcnn_cell_weights.h5'
     model.load_weights(model_path, by_name=True)
     count_dict = {'Blue': 0, 'Red': 0, 'Green': 0}
-    for image_path in images_paths:
-        count_dict = plot_predicted(model, image_path, cfg, count_dict)
+    for img in images_path:
+        count_dict = plot_predicted(model, img, cfg, count_dict)
     print("Total cells in all images: " + "\nBlue channel: " + str(count_dict["Blue"])+"\nRed channel: " +
           str(count_dict["Red"])+"\nGreen channel: "+str(count_dict["Green"]))
 
