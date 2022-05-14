@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88a7ab9e-6a3c-4acb-abfd-ae96da2a638f" name="Default Changelist" comment="editing readme" />
+    <list default="true" id="88a7ab9e-6a3c-4acb-abfd-ae96da2a638f" name="Default Changelist" comment="editing readme">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +26,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="ipynb" value="1" />
+          <entry key="ipynb" value="2" />
           <entry key="md" value="3" />
           <entry key="py" value="31" />
           <entry key="txt" value="6" />
@@ -32,7 +34,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="IPNB" value="1" />
+          <entry key="IPNB" value="2" />
           <entry key="Markdown" value="3" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="Python" value="31" />
@@ -41,30 +43,39 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="3" />
-          <entry key="md" value="1599" />
-          <entry key="py" value="1652" />
+          <entry key="md" value="2048" />
+          <entry key="py" value="1661" />
           <entry key="txt" value="74" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="1599" />
+          <entry key="Markdown" value="2048" />
           <entry key="PLAIN_TEXT" value="77" />
-          <entry key="Python" value="1652" />
+          <entry key="Python" value="1661" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="357">
-                <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+              <first_editor relative-caret-position="311">
+                <caret line="60" column="63" lean-forward="true" selection-start-line="60" selection-start-column="63" selection-end-line="60" selection-end-column="63" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/User_Example/UsingRCNN.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="1" />
             </state>
           </provider>
         </entry>
@@ -72,8 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/R_CNN/UsingRCNN.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="90" column="17" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
+            <state relative-caret-position="602">
+              <caret line="88" column="22" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
               <folding>
                 <element signature="e#46#75#0" expanded="true" />
               </folding>
@@ -117,8 +128,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/R_CNN/DetectCellsInNewImages.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="191" column="34" selection-start-line="191" selection-start-column="34" selection-end-line="191" selection-end-column="34" />
+            <state relative-caret-position="466">
+              <caret line="184" column="28" lean-forward="true" selection-start-line="184" selection-start-column="28" selection-end-line="184" selection-end-column="28" />
               <folding>
                 <element signature="e#103#125#0" expanded="true" />
               </folding>
@@ -129,8 +140,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/R_CNN/TrainRCNNModel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-964">
-              <caret line="19" column="68" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
+            <state relative-caret-position="551">
+              <caret line="99" column="20" lean-forward="true" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="20" />
               <folding>
                 <element signature="e#56#78#0" expanded="true" />
               </folding>
@@ -171,7 +182,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Labeling_tool/labeling_tool.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Labeling_tool/README.txt" />
         <option value="$PROJECT_DIR$/Labeling_Tool/README.md" />
         <option value="$PROJECT_DIR$/R_CNN/ParseAnnotationFile.py" />
@@ -179,9 +189,10 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/Labeling_Tool/read_files.py" />
         <option value="$PROJECT_DIR$/Labeling_Tool/labeling_tool.py" />
-        <option value="$PROJECT_DIR$/R_CNN/DetectCellsInNewImages.py" />
-        <option value="$PROJECT_DIR$/User_Example/UsingRCNN.ipynb" />
         <option value="$PROJECT_DIR$/R_CNN/UsingRCNN.py" />
+        <option value="$PROJECT_DIR$/User_Example/UsingRCNN.ipynb" />
+        <option value="$PROJECT_DIR$/R_CNN/DetectCellsInNewImages.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -213,6 +224,11 @@
               <item name="RCNN_Cell_Detection" type="b2602c69:ProjectViewProjectNode" />
               <item name="RCNN_Cell_Detection" type="462c0819:PsiDirectoryNode" />
               <item name="R_CNN" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RCNN_Cell_Detection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RCNN_Cell_Detection" type="462c0819:PsiDirectoryNode" />
+              <item name="User_Example" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -431,16 +447,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="357">
-            <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/R_CNN/PlotRectangle.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -452,13 +458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="97" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -482,10 +481,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/R_CNN/UsingRCNN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="602">
+          <caret line="88" column="22" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
+          <folding>
+            <element signature="e#46#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/R_CNN/TrainRCNNModel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-964">
-          <caret line="19" column="68" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
+        <state relative-caret-position="551">
+          <caret line="99" column="20" lean-forward="true" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="20" />
           <folding>
             <element signature="e#56#78#0" expanded="true" />
           </folding>
@@ -494,28 +510,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/R_CNN/DetectCellsInNewImages.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="191" column="34" selection-start-line="191" selection-start-column="34" selection-end-line="191" selection-end-column="34" />
+        <state relative-caret-position="466">
+          <caret line="184" column="28" lean-forward="true" selection-start-line="184" selection-start-column="28" selection-end-line="184" selection-end-column="28" />
           <folding>
             <element signature="e#103#125#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/User_Example/UsingRCNN.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="1" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="311">
+            <caret line="60" column="63" lean-forward="true" selection-start-line="60" selection-start-column="63" selection-end-line="60" selection-end-column="63" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/R_CNN/UsingRCNN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="90" column="17" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
-          <folding>
-            <element signature="e#46#75#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/User_Example/UsingRCNN.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
         </state>
       </provider>
     </entry>
