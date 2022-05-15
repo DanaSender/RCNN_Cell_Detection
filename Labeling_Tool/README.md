@@ -1,17 +1,18 @@
-To execute labeling tool:
+# Execute Labeling Tool:
 
 * Open the folder placed where the tool has been saved and then to run a command line (terminal).
 
 * Several inputs are then required as follows:
+   
+**counting_tool.exe** [-h] [-f FOLDER] [-i IMAGE] -s SAVE
 
-counting_tool.exe [-h] [-f FOLDER] [-i IMAGE] -s SAVE
+**counting_tool.exe** &nbsp; &nbsp; &nbsp; &nbsp; the tool name
 
-The first input to be used is the tool name counting_tool.exe.
-The second input consists of two options: The first option is to choose one image at a time.
-To do this, the user types the parameter -i followed by the path of the image.
-The second option is to open a folder where a few images are located.
-To do this, the user types the parameter -f followed by the path of the folder.
-For the last input, the user types -s followed by the path of the folder where the results have been saved
+**-i** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *[optional]* choose one image at a time followed by the path of the image.
+
+**-f** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *[optional]* open a folder where a few images are located followed by the path of the folder.
+
+**-s** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; followed by the path of the folder where the results have been saved
 
 * Press Enter for the tool to execute.
 
@@ -23,6 +24,6 @@ folder of images opens automatically.
 In both cases, the last results are saved. It is therefore better to first mark all cells in all channels and to only exit then.
 
 Notes:
-- It is better to first mark all cells in all channels and to only exit then.
+* It is better to first mark all cells in all channels and to only exit then.
 
-- To run the tool it is needed to be python installed in the computer.
+* To run the tool it is needed to be python installed in the computer.

@@ -17,7 +17,7 @@ The repository includes:
     * Pre-trained weights of MS COCO for the transfer learning.
     * Source code of Mask R-CNN built on FPN and ResNet101.
 * User_Example -
-    * Demonstration my model on a new given image
+    * Demonstration of my model on a new image
 
 
 # Labeling Tool
