@@ -6,13 +6,12 @@
    
 **counting_tool.exe** [-h] [-f FOLDER] [-i IMAGE] -s SAVE
 
-**counting_tool.exe** &nbsp; &nbsp; &nbsp; &nbsp; the tool name
 
-**-i** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *[optional]* choose one image at a time followed by the path of the image.
+**-i** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *[optional]* choose one image at a time followed by the path of the image.
 
-**-f** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *[optional]* open a folder where a few images are located followed by the path of the folder.
+**-f** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *[optional]* open a folder where a few images are located followed by the path of the folder.
 
-**-s** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; followed by the path of the folder where the results have been saved
+**-s** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; followed by the path of the folder where the results have been saved
 
 * Press Enter for the tool to execute.
 
