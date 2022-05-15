@@ -1,4 +1,4 @@
-# Execute Labeling Tool:
+# Execute Labeling Tool
 
 * Open the folder placed where the tool has been saved and then to run a command line (terminal).
 
